@@ -1,3 +1,8 @@
 <%article = Article.find(params[:id])%>
 <h3><%=article.title%></h3>
 <h3><%=article.content%></h3>
+
+<form method="post" action="/articles/<%= @article.id %>">
+  <input type="hidden" name="_method" value="delete" />
+  <input type="submit" />
+</form>
